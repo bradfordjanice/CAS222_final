@@ -1,0 +1,48 @@
+/*
+File Name: accordian.less
+Date: 3/10/18
+Programmer: Janice Bradford
+Project: Ace in the Hole Multisport Events template
+
+Modified code from https://www.w3schools.com/howto/howto_js_accordion.asp
+*/
+
+/* Style the buttons that are used to open and close the accordion panel */ 
+.accordion {
+    background-color: #eee;
+    color: #444;
+    font-size: 1em; 
+    font-weight: bold; 
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: 1px solid black;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .activeAccordian class with JS), and when you move the mouse over it (hover) */
+.activeAccordian, .accordion:hover {
+    background-color: #ccc;
+} 
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out; 
+}
+
+.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.activeAccordian:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}

@@ -1,0 +1,321 @@
+/*
+File Name: style.less
+Date: 01/28/18
+Programmer: Janice Bradford
+Project: Ace in the Hole Multisport Events template
+*/  
+
+@import "mixins.less";
+ 
+/* use to outline blocks for styling and debugging
+* { outline: 1px solid red !important } */
+
+/* MOBILE STYLES < 481 pixels*/ 
+
+/* background colors */ 
+
+//@baseBkgnd_color: #EDEDED; grey
+@baseBkgnd_color: #FFFFFF; //white
+@headerBkgnd_color: #FFFFFF; //white
+@weatherBkgnd_color: #EDEDED; //grey
+@photosBkgnd_color: #ffffff; //white
+@contentBkgnd_color: #FFFFFF; //white
+@packetBkgnd_color: #C1012B; //red
+@socialBkgnd_color: #111111; //black
+@footerBkgnd_color: #FFFFFF; //white 
+
+/* font colors */
+ 
+@base_color: #000000; //black
+@header_color: #333333; //black
+@weather_color: #000000; //black
+@photos_color: #FFFFFF; //white
+@content_color: #333333; //black
+@packet_color: #FFFFFF; //white
+@social_color: #FFFFFF; //white
+@footer_color: #000000; //black
+
+/* sizes */
+
+@m_title_size: 1em; 
+@t_title_size: 1.6em;
+@d_title_size: 2.5em;
+@m_tagline_size: .75em;
+@t_tagline_size: .75em;
+@d_tagline_size: 1.2em; 
+@m_font_size: 16px;
+@t_font_size: @m_font_size * .9375;
+@d_font_size: @m_font_size * .875;
+@h1_font_size: 2em;
+@h2_font_size: @h1_font_size * .7;
+@h3_font_size: @h1_font_size * .55;
+@designer_font_size: .75em;
+@contact_font_size: 0.9em;
+@m_logo_size: 50px;
+@t_logo_size: 75px;
+@d_logo_size: 100px;
+@m_photo_ht: 200px;
+@t_photo_ht: 275px;
+@d_photo_ht: 275px; 
+
+/* margins and padding */
+
+@p_h_margin: 1em 1em 1em 0;
+@m_body_margin: 0 1em;
+@t_body_margin: 0 3em;
+@d_body_margin: 0 4em;
+@ol_li_left_margin: 0;
+@p_h_padding: 0.5em;
+
+
+/* SELECTORS */
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5em;
+  #project_mixins > .common_properties(@baseBkgnd_color, @m_font_size, @m_body_margin);
+  width: 90%;
+}
+
+main {  
+  width: 100%;
+} 
+
+header {
+  #project_mixins > .background_color(@headerBkgnd_color);
+  #project_mixins > .color(@header_color);
+}
+ 
+p, h1, h2, h3 {
+  margin: @p_h_margin;
+  padding: @p_h_padding;
+}
+
+h1, h2, h3 {
+  font-weight: bold; 
+}
+
+h1 {
+  #project_mixins > .size(@h1_font_size);
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 2em;
+}
+
+h2 {
+  #project_mixins > .size(@h2_font_size);
+  margin-top: .5em;
+  margin-bottom: 0;
+}
+
+h3 {
+  #project_mixins > .size(@h3_font_size);
+  font-style: italic;
+}
+
+div.pageHeader {
+  width: 100%;
+}
+
+img.logo {  
+  width: @m_logo_size;
+  float: left;
+  left: 10px;
+}
+
+img.icon {
+  margin-left: 6px; 
+}
+
+h1.name {
+  position: relative;
+  font-size: @m_title_size;
+  top: 18px;
+  left: 10px;
+  line-height: 100%;
+  margin-top: 20px;
+  margin-bottom: 10px; 
+}
+ 
+p.tagline {
+  margin: 0;
+  padding: 0 0 5px 0; 
+  position: relative;
+  left: 10px;
+  font-size: @m_tagline_size;
+  font-family: 'Kalam', cursive; 
+} 
+
+h3.sidebar {
+  margin-bottom: 0; 
+}
+p.sidebar {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#packet {
+  #project_mixins > .background_color(@packetBkgnd_color);
+  #project_mixins > .color(@packet_color);
+}
+
+#social {
+  #project_mixins > .background_color(@socialBkgnd_color);
+  #project_mixins > .color(@social_color);
+}
+
+#packet, #social {
+  border: 1px solid black;
+}
+
+#weather {
+  #project_mixins > .background_color(@weatherBkgnd_color);
+  #project_mixins > .color(@weather_color);
+}
+
+#photograph {
+  #project_mixins > .background_color(@photosBkgnd_color);
+  #project_mixins > .color(@photos_color);
+}
+
+#slideshow {
+  display: none;
+}
+
+#content {
+  #project_mixins > .background_color(@contentBkgnd_color);
+  #project_mixins > .color(@content_color);
+  padding-left: .5em; 
+}
+
+a.twitter-timeline { 
+  color: #ffffff; 
+  height: 200px;
+}
+
+footer {
+  #project_mixins > .background_color(@footerBkgnd_color);
+  margin-bottom: 10px;
+  font-style: italic;
+  #project_mixins > .color(@footer_color);
+}
+
+#designer {
+  #project_mixins > .size(@designer_font_size);
+  line-height: 1.1em; 
+  text-align: center;
+}
+
+#contact {
+  letter-spacing: 3px;
+  #project_mixins > .size(@contact_font_size);
+}
+
+/* TABLET STYLES < 1024 pixels */
+
+@media only screen and (min-width: 481px) {
+
+  body {
+    #project_mixins > .common_properties(@baseBkgnd_color, @t_font_size, @t_body_margin);
+    max-width: 960px;
+  }
+  
+  h1.name {
+    font-size: @t_title_size;
+  }
+  
+  p.tagline {
+    font-size: @t_tagline_size;
+    font-family: 'Kalam', cursive; 
+  }
+  
+  img.logo {  
+    width: @t_logo_size;
+  }
+
+  h2 {
+    //margin-top: 0;
+    //margin-bottom: .8em;
+    margin-top: .5em;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  nav ul {  
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 15px;
+  }
+  
+  .logo {
+    width: @t_logo_size; 
+  }
+
+  #weather, #photograph, footer { 
+    width: 100%;
+    margin-right: 5%;
+    float: left;
+  } 
+  
+  #photograph {
+    display: none; 
+  }
+
+  #slideshow {
+    display: inline;
+    #project_mixins > .background_color(@photosBkgnd_color);
+    #project_mixins > .color(@photos_color);
+  }
+  
+  #content {
+    width: 62%;   
+    float: left;
+  }
+  
+  #packet, #social {
+    width: 35%;
+    float: right; 
+  }
+
+}
+
+/* DESKTOP STYLES  >= 1024 pixels*/  
+
+@media only screen and (min-width: 1024px) {
+
+  body {
+    #project_mixins > .common_properties(@baseBkgnd_color, @d_font_size, @d_body_margin);
+    max-width: 1200px;
+  }
+  
+  img.logo {
+    width: @d_logo_size; 
+  }
+  
+  h1.name {
+    font-size: @d_title_size;
+  }
+  
+  p.tagline {
+    font-size: @d_tagline_size;
+    font-family: 'Kalam', cursive;
+  }
+  
+  #content {
+    width: 74%; 
+    float: left;
+  }
+  
+  #packet, #social {
+    width: 25%;
+    float: right; 
+  }
+  
+}

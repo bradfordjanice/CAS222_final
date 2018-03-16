@@ -1,0 +1,66 @@
+/*
+File Name: menu.less
+Date: 01/28/18
+Programmer: Janice Bradford
+Project: Ace in the Hole Multisport Events template 
+
+Code was modified from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
+*/
+
+/*  MENU   */
+
+body {margin:0;}
+
+.topnav {
+  display: block; 
+  overflow: hidden;
+  background-color: #111111;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #C1012B;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+ 
+@media screen and (max-width: 480px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}
